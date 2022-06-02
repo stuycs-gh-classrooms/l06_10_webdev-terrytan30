@@ -33,10 +33,10 @@ function drawAnalog(){
   h = hour();
   m = minute();
   s = second();
-  String hour = "";
-  String minute = "";
-  String second = "";
-  String AMPM = "";
+  var hour = "";
+  var minute = "";
+  var second = "";
+  var AMPM = "";
   if(h > 12){ // formatting into 12 hour time
     h -= 12;
   }
@@ -74,7 +74,7 @@ function drawAnalog(){
 }
 
 function timeOfDay(){
-  String timeofday = "";
+  var timeofday = "";
   if(hour() >= 5 && hour() < 12){
     timeofday = "Morning";
   }
