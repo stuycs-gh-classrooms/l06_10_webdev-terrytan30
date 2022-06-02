@@ -30,9 +30,9 @@ function clockFace(){
   circle(250,250,300);
 }
 function drawAnalog(){
-  h = hour();
-  m = minute();
-  s = second();
+  h = date.getHours();
+  m = date.getMinutes();
+  s = date.getSeconds();
   var hour = "";
   var minute = "";
   var second = "";
