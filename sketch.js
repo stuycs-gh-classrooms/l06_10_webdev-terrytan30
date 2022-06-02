@@ -1,5 +1,7 @@
 var h,m,s;
 var x,y,x1,y1;
+var date = new Date;
+date.setTime(result_from_Date_getTime);
 
 function setup(){
   createCanvas(500,500);
