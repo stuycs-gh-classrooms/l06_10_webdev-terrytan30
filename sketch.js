@@ -77,13 +77,13 @@ function drawAnalog(){
 
 function timeOfDay(){
   var timeofday = "";
-  if(hour() >= 5 && hour() < 12){
+  if(date.getHours() >= 5 && date.getHours() < 12){
     timeofday = "Morning";
   }
-  else if(hour() > 12 && hour() < 21){
+  else if(date.getHours() > 12 && date.getHours() < 21){
     timeofday = "Afteroon";
   }
-  else if(hour() >= 21 || hour() < 5){
+  else if(date.getHours() >= 21 || date.getHours() < 5){
     timeofday = "Night";
   }
   text(timeofday, 20, 440); 
@@ -92,23 +92,23 @@ function timeOfDay(){
 function drawSecond(){
   stroke(255,0,0);
   strokeWeight(2);
-  x = 120 * sin(6*radians(second())) + 250;
-  y = 120 * -cos(6*radians(second())) + 250;
+  x = 120 * sin(6*radians(date.getSeconds())) + 250;
+  y = 120 * -cos(6*radians(date.getSeconds())) + 250;
   line(250,250,x,y);
 }
 
 function drawHour(){
   stroke(0);
   strokeWeight(4);
-  x = 80 * sin(30*radians(hour())) + 250;
-  y = 80 * -cos(30*radians(hour())) + 250;
+  x = 80 * sin(30*radians(date.getHours())) + 250;
+  y = 80 * -cos(30*radians(date.getHours())) + 250;
   line(250,250,x,y);
 }
 
 function drawMinute(){
   stroke(0);
   strokeWeight(3);
-  x = 100 * sin(6*radians(minute())) + 250;
-  y = 100 * -cos(6*radians(minute())) + 250;
+  x = 100 * sin(6*radians(date.getMinutes())) + 250;
+  y = 100 * -cos(6*radians(date.getMinutes())) + 250;
   line(250,250,x,y);
 }
