@@ -62,10 +62,10 @@ function drawAnalog(){
   else if(m >= 10){ // otherwise
     minute += m;
   }
-  if(hour() < 12){
+  if(date.getHours() < 12){
     AMPM = "AM";
   }
-  else if(hour() >= 12){
+  else if(date.getHours() >= 12){
     AMPM = "PM";
   }
   textSize(25);
